@@ -2,7 +2,7 @@
  * Source File:
  *    POSITION
  * Author:
- *    <your name here>
+ *    Br. Helfrich
  * Summary:
  *    Everything we need to know about a location on the screen.
  ************************************************************************/
@@ -10,70 +10,131 @@
 #include "position.h"
 #include "velocity.h"
 #include "acceleration.h"
-#include <cassert>
 
+ /******************************************
+  * POSITION Constructors
+  *****************************************/
 
-Position::Position(double x, double y) : x(9.9), y(9.9)
+  // Default constructor
+Position::Position()
 {
- 
+    x = 0.0;
+    y = 0.0;
+}
+
+// Constructor given x and y
+Position::Position(double x, double y)
+{
+    this->x = x;
+    this->y = y;
+}
+
+// Constructor copy
+Position::Position(const Position& pos)
+{
+    x = pos.x;
+    y = pos.y;
+}
+
+
+/******************************************
+ * POSITION assign
+ * Copy the values of another Position & returns itself
+ *****************************************/
+
+Position Position::assign(const Position& pos)
+{
+    x = pos.x;
+    y = pos.y;
+    return *this;
+}
+
+
+/******************************************
+ * POSITION getters
+ *****************************************/
+
+ // Getter for x
+double Position::getX() const
+{
+    return x;
+}
+
+// Getter for y
+double Position::getY() const
+{
+    return y;
 }
 
 /******************************************
- * POINT : ASSIGNMENT
- * Assign a point. Please look ahead to
- * Week 12 C++ reading for an idea of how this works.
- * Basically, we are copying the data from posRHS
- * into this.
+ * POSITION equality operators
  *****************************************/
-Position& Position::operator = (const Position& posRHS)
+
+ // == operator
+bool Position::operator == (const Position& rhs) const
 {
-   return *this;
+    // If elements of the position are equal, return true
+    if (x == rhs.x && y == rhs.y)
+    {
+        return true;
+    }
+
+    // If elements of the position are not equal, return false
+    return false;
 }
 
-/************************************************************************
- * UPDATE POSITION
- * Update the current position based on the impulse of velocity
- * taking into account time dilation:
- * 
- *   s = s_0 + vt + 1/2 at^2
- * 
- *   INPUT  POSITION     The location of the item
- *          VELOCITY     The velocity of the item
- *          ACCELERATION The acceleration of the item
- *          TIME         How much time are we talking about?
- *   OUTPUT POSITION     The location, updated
- * 
- *
- *  x = x + dx t + 1/2 ddx t^2
- *  y = y + dy t + 1/2 ddy t^2
- *************************************************************************/
+// != operator
+bool Position::operator != (const Position& rhs) const
+{
+    // If either element of the position unequal, return true
+    if (x != rhs.x || y != rhs.y)
+    {
+        return true;
+    }
+
+    // If elements of the position are equal, return false
+    return false;
+}
+
+
+/******************************************
+ * POSITION setters
+ *****************************************/
+
+ // Setter for x
+void Position::setX(double x)
+{
+    this->x = x;
+}
+
+// Setter for y
+void Position::setY(double y)
+{
+    this->y = y;
+}
+
+
+/******************************************
+ * POSITION Adders
+ * Update point based on the distance formula
+ *   s = s_0 + vt + 1/2 a t^2
+ *****************************************/
+
+ // Adder for x and y
 void Position::add(const Acceleration& a, const Velocity& v, double t)
 {
+    x += v.getDX() * t + 0.5 * a.getDDX() * t * t;
+    y += v.getDY() * t + 0.5 * a.getDDY() * t * t;
 }
 
-
-/******************************************
- * POSITION insertion
- *       Display coordinates on the screen
- *****************************************/
-std::ostream& operator << (std::ostream& out, const Position& pt)
+// Adder for x
+void Position::addX(double x)
 {
-   out << "(" << pt.getMetersX() << "m , " << pt.getMetersY() << "m)";
-   return out;
+    this->x += x;
 }
-   
-/*******************************************
-* POSITION extraction
-*       Prompt for coordinates
-******************************************/
-std::istream& operator >> (std::istream& in, Position& pt)
+
+// Adder for y
+void Position::addY(double y)
 {
-   double x;
-   double y;
-   in >> x >> y;
-
-   pt.setMetersX(x);
-   pt.setMetersY(y);
-
-   return in;
+    this->y += y;
 }

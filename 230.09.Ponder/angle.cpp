@@ -2,7 +2,7 @@
  * Source File:
  *    ANGLE
  * Author:
- *    <your name here>
+ *    Br. Helfrich, Thomas, David
  * Summary:
  *    Everything we need to know about a direction
  ************************************************************************/
@@ -12,13 +12,28 @@
 #include <cassert>
 using namespace std;
 
- /************************************
-  * ANGLE : NORMALIZE
-  ************************************/
+/************************************
+ * ANGLE : NORMALIZE
+ ************************************/
 double Angle::normalize(double radians) const
 {
-   return 9.9;
+    const double twoPi = 2.0 * M_PI;
+
+    while (radians < 0)
+        radians += twoPi;
+
+    while (radians >= twoPi)
+        radians -= twoPi;
+
+    return radians;
 }
 
+double Angle::getDegrees() const
+{
+    return radians * (180.0 / M_PI);
+}
 
-
+double Angle::getRadians() const
+{
+    return radians;
+}
