@@ -2,7 +2,7 @@
  * Header File:
  *    TEST ANGLE
  * Author:
- *    <your name here>
+ *    Thomas Gruber
  * Summary:
  *    All the unit tests for ANGLE
  ************************************************************************/
@@ -53,6 +53,11 @@ public:
       add_negativeLap();
 
       // Ticket 2: Components
+      getDx(); // Start my addistions -----
+      getDy();
+      isRight();
+      isLeft();
+	  setDxDy(); // End my additions -----
       getDx_up();
       getDx_down();
       getDx_left();
@@ -594,7 +599,7 @@ private:
       assertEquals(r, M_PI + M_PI_2);
       assertEquals(a.radians, M_PI + M_PI_2);
    }  // teardown
-   
+
    /*********************************************
     * name:    GET DX - UP
     * input:   0 degrees
@@ -752,4 +757,76 @@ private:
       assertUnit(NOT_YET_IMPLEMENTED);
    }
 
+
+   // My code starts here
+   /*********************************************
+    * name:    getDx
+    * input:   0 degrees
+    * output:  0
+    *********************************************/
+   double getDx() const
+   {
+       return sin(radians);
+   }
+
+   /*********************************************
+    * name:    getDy
+    * input:   0 degrees
+    * output:  0
+    *********************************************/
+   double getDy() const
+   {
+       return cos(radians);
+   }
+
+   /*********************************************
+    * name:    isRigh
+    * input:   0 degrees
+    * output:  0
+    *********************************************/
+   bool isRight() const
+   {
+       return getDx() > 0;
+   }
+
+   /*********************************************
+    * name:    isLeft
+    * input:   0 degrees
+    * output:  0
+    *********************************************/
+   bool isLeft() const
+   {
+       return getDx() < 0;
+   }
+
+   /*********************************************
+    * name:    setDxDy
+    * input:   0 degrees
+    * output:  0
+    *********************************************/
+   void setDxDy(double dx, double dy)
+   {
+       radians = atan2(dx, dy);
+
+       if (radians < 0)
+           radians += 2.0 * M_PI;
+   }
+
+   void dxUpIsZero()
+   {
+       Angle a(0.0);
+       assert(fabs(a.getDx() - 0.0) < 0.0001);
+   }
+
+   void dxRightIsOne()
+   {
+       Angle a(M_PI / 2);
+       assert(fabs(a.getDx() - 1.0) < 0.0001);
+   }
+
+   void dxLeftIsNegativeOne()
+   {
+       Angle a(3 * M_PI / 2);
+       assert(fabs(a.getDx() + 1.0) < 0.0001);
+   }
 };

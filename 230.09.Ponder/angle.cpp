@@ -2,7 +2,7 @@
  * Source File:
  *    ANGLE
  * Author:
- *    Br. Helfrich, Thomas, David
+ *    Br. Helfrich (teacher), Thomas Gruber
  * Summary:
  *    Everything we need to know about a direction
  ************************************************************************/

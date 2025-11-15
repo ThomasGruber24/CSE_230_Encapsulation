@@ -1,0 +1,231 @@
+﻿  acceleration.cpp
+  angle.cpp
+  main.cpp
+  position.cpp
+  test.cpp
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\main.cpp(13,18): error C2039: 'metersFromPixels': is not a member of 'Position'
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testAngle.h(517,9): error C2039: 'setDxDy': is not a member of 'Angle'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\angle.h(24,7):
+      see declaration of 'Angle'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testAngle.h(650,14): error C2039: 'getDx': is not a member of 'Angle'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\angle.h(24,7):
+      see declaration of 'Angle'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testAngle.h(709,14): error C2039: 'getDy': is not a member of 'Angle'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\angle.h(24,7):
+      see declaration of 'Angle'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(86,43): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(87,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(93,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(95,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(106,43): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(107,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(115,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(119,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(130,43): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(131,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(140,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(143,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(145,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(156,43): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(157,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(169,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(172,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(174,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(216,43): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(217,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(222,22): error C2039: 'getMetersX': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(227,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(229,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(240,43): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(241,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(246,22): error C2039: 'getMetersY': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(250,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(253,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(311,43): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(312,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(317,11): error C2039: 'setMetersX': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(321,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(323,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(333,43): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(334,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(339,11): error C2039: 'setMetersY': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(343,7): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(345,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(538,43): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(539,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\testPosition.h(564,17): error C2039: 'metersFromPixels': is not a member of 'Position'
+  (compiling source file 'test.cpp')
+      C:\Users\Thomas\Documents\School\Fall 2025\C++\Current Files\230.09.Ponder\position.h(22,7):
+      see declaration of 'Position'
+  
+  velocity.cpp
+  Generating Code...
