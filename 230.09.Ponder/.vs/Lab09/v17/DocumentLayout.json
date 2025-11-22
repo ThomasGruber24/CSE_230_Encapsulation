@@ -1,12 +1,60 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\230.09.Ponder\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D306AC8-0CB5-4AE0-9699-4A2C535C132A}|Lab09.vcxproj|C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\230.09.Ponder\\angle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8D306AC8-0CB5-4AE0-9699-4A2C535C132A}|Lab09.vcxproj|solutionrelative:angle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D306AC8-0CB5-4AE0-9699-4A2C535C132A}|Lab09.vcxproj|C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\230.09.Ponder\\testAngle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8D306AC8-0CB5-4AE0-9699-4A2C535C132A}|Lab09.vcxproj|solutionrelative:testAngle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "angle.cpp",
+              "DocumentMoniker": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\230.09.Ponder\\angle.cpp",
+              "RelativeDocumentMoniker": "angle.cpp",
+              "ToolTip": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\230.09.Ponder\\angle.cpp",
+              "RelativeToolTip": "angle.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-22T06:19:49.37Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "testAngle.h",
+              "DocumentMoniker": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\230.09.Ponder\\testAngle.h",
+              "RelativeDocumentMoniker": "testAngle.h",
+              "ToolTip": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\230.09.Ponder\\testAngle.h",
+              "RelativeToolTip": "testAngle.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMECAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-22T06:20:03.557Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
