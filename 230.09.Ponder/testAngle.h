@@ -38,6 +38,15 @@ public:
         add_value();
 
         // Ticket 2: Angle Normalize
+        getDx(); // Get the horizontal component of an angle, assuming a unit circle
+        getDy(); // Get the vertical component of an angle
+        isRight_Right();
+        isRight_Left();// Is the angle to the right side of the unit circle ?
+        isLeft_Right(); 
+        isLeft_Left();// Is the angle on the left side of the unit circle ?
+		isRight();
+		isLeft();
+        setDxDy(1.0, 0.0); // Set an angle based on components.
         setRadians_negative();
         setRadians_oneLap();
         setRadians_sixLaps();
@@ -524,5 +533,205 @@ private:
         assertEquals(r, M_PI + M_PI_2);
         assertEquals(a.radians, M_PI + M_PI_2);
     }  // teardown
+
+    double getDx() // Get the horizontal component of an angle, assuming a unit circle
+    {
+		return cos(radians);
+    }
+
+    void getDy() // Get the vertical component of an angle
+    {
+		return sin(radians);
+    }
+
+    void getDx_up()
+    {   // Setup
+        Angle a;
+        a.radians = 0.0; // 0 degrees
+        double dx = -99.9;
+        // Exercise
+        dx = a.getDx();
+        // Verify
+        assertUnit(dx, 1.0);
+        assertEquals(a.radians, 0.0);
+    }   // Teardown
+
+    void getDx_left()
+    {   // Setup
+        Angle a;
+        a.radians = (3.0 * M_PI) / 2.0; // 270 degrees
+        double dx = -99.9;
+        // Exercise
+        dx = a.getDx();
+        // Verify
+        assertUnit(dx, 0.0);
+        assertEquals(a.radians, (3.0 * M_PI) / 2.0);
+    }   // Teardown
+
+    void getDx_down()
+    {   // Setup
+        Angle a;
+        a.radians = M_PI; // 180 degrees
+        double dx = -99.9;
+        // Exercise
+        dx = a.getDx();
+        // Verify
+        assertUnit(dx, -1.0);
+        assertEquals(a.radians, M_PI);
+    }
+
+    void getDx_right()
+    {   // Setup
+        Angle a;
+        a.radians = M_PI * 0.5; // 90 degrees
+        double dx;
+        // Exercise
+        dx = a.getDx();
+        // Verify
+        assertUnit(dx, 0.0);
+        assertEquals(a.radians, M_PI * 0.5);
+    }
+
+    void getDy_up()
+    {   // Setup
+        Angle a;
+        a.radians = 0.0; // 0 degrees
+        double dy = -99.9;
+        // Exercise
+        dy = a.getDy();
+        // Verify
+        assertUnit(dy, 0.0);
+        assertEquals(a.radians, 0.0);
+    }   // Teardown
+
+    void getDy_left()
+    {   // Setup
+        Angle a;
+        a.radians = (3.0 * M_PI) / 2.0; // 270 degrees
+        double dy = -99.9;
+        // Exercise
+        dy = a.getDy();
+        // Verify
+        assertUnit(dy, 1.0);
+        assertEquals(a.radians, (3.0 * M_PI) / 2.0);
+    }   // Teardown
+
+    void getDy_down()
+    {   // Setup
+        Angle a;
+        a.radians = M_PI; // 180 degrees
+        double dy = -99.9;
+        // Exercise
+        dy = a.getDy();
+        // Verify
+        assertUnit(dy, -1.0);
+        assertEquals(a.radians, M_PI);
+    }   // Teardown
+
+    void getDy_right()
+    {   // Setup
+        Angle a;
+        a.radians = M_PI * 0.5; // 90 degrees
+        double dy;
+        // Exercise
+        dy = a.getDy();
+        // Verify
+        assertUnit(dy, 1.0);
+        assertEquals(a.radians, M_PI * 0.5);
+    }   // Teardown
+
+    bool isRight()
+    {
+        return cos(radians) > 0;
+    }
+
+    void isLeft()
+    {
+		return cos(radians) < 0;
+    }
+
+    void isRight_Right() // Is the angle to the right side of the unit circle ?
+    {   // Setup
+        Angle a;
+        a.radians = M_PI / 6.0; // 30 degrees
+        bool is;
+        // Exercise
+        is = a.isRight();
+        // Verify
+        assertUnit(is == true);
+        assertEquals(a.radians, M_PI / 6.0);
+    }   // Teardown
+
+    void isRight_Left() // Is the angle to the right side of the unit circle ?
+    {   // Setup
+        Angle a;
+        a.radians = (M_PI * 2.0) - M_PI / 6.0; // 330 degrees
+        bool is;
+        // Exercise
+        is = a.isRight();
+        // Verify
+        assertUnit(is == true);
+        assertEquals(a.radians, (M_PI * 2.0) - M_PI / 6.0);
+    }   // Teardown
+
+    void isLeft_Right() // Is the angle on the left side of the unit circle ?
+    {   // Setup
+        Angle a;
+        a.radians = M_PI / 6.0; // 30 degrees
+        bool is;
+        // Exercise
+        is = a.isLeft();
+        // Verify
+        assertUnit(is == false);
+        assertEquals(a.radians, M_PI / 6.0);
+    }   // Teardown
+
+    void isLeft_Left() // Is the angle on the left side of the unit circle ?
+    {   // Setup
+        Angle a;
+        a.radians = (M_PI * 2.0) - M_PI / 6.0; // 330 degrees
+        bool is;
+        // Exercise
+        is = a.isLeft();
+        // Verify
+        assertUnit(is == false);
+        assertEquals(a.radians, (M_PI * 2.0) - M_PI / 6.0);
+    }   // Teardown
+
+    void setDxDy(double dx, double dy) // Set an angle based on components.
+    {
+		radians = atan2(dy, dx);
+
+        if (radians < 0)
+			radians += 2.0 * M_PI;
+    }
+
+    void setDxDy_right()
+    {   // Setup
+        Angle a;
+        // Exercise
+        a.setDxDy(1.0, 0.0);
+        // Verify
+        assertUnit(a.radians, 0.0);
+    }   // Teardown
+
+    void setDxDy_upLeft()
+    {   // Setup
+        Angle a;
+        // Exercise
+        a.setDxDy(-1.0, 1.0);
+        // Verify
+        assertUnit(a.radians, 3.0 * M_PI / 4.0);
+    }   // Teardown
+
+    void setDxDy_down()
+    {   // Setup
+        Angle a;
+        // Exercise
+        a.setDxDy(0.0, -1.0);
+        // Verify
+        assertUnit(a.radians, 3.0 * M_PI / 2.0);
+    }   // Teardown
+
 
 };
