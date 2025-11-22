@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\W10 Position\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{18CFE0BC-CDA3-455A-AEED-F097EDE315D6}|W10 Position\\W10 Position.vcxproj|C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\W10 Position\\W10 Position\\W10 Position.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{18CFE0BC-CDA3-455A-AEED-F097EDE315D6}|W10 Position\\W10 Position.vcxproj|solutionrelative:W10 Position\\W10 Position.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "W10 Position.cpp",
+              "DocumentMoniker": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\W10 Position\\W10 Position\\W10 Position.cpp",
+              "RelativeDocumentMoniker": "W10 Position\\W10 Position.cpp",
+              "ToolTip": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\W10 Position\\W10 Position\\W10 Position.cpp",
+              "RelativeToolTip": "W10 Position\\W10 Position.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-19T01:13:50.705Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
