@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C10404E225F94C6E0060A389 /* uiInteract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10404CB25F94C6D0060A389 /* uiInteract.cpp */; };
+		C10404E325F94C6E0060A389 /* uiDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10404CC25F94C6D0060A389 /* uiDraw.cpp */; };
+		C10404E425F94C6E0060A389 /* physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10404D125F94C6D0060A389 /* physics.cpp */; };
+		C10404E525F94C6E0060A389 /* projectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10404D225F94C6D0060A389 /* projectile.cpp */; };
+		C10404E725F94C6E0060A389 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10404D525F94C6D0060A389 /* position.cpp */; };
+		C10404E825F94C6E0060A389 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10404D625F94C6D0060A389 /* test.cpp */; };
+		C10404E925F94C6E0060A389 /* ground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10404D825F94C6D0060A389 /* ground.cpp */; };
+		C10404EA25F94C6E0060A389 /* velocity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10404D925F94C6D0060A389 /* velocity.cpp */; };
+		C10404EB25F94C6E0060A389 /* simulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C10404DF25F94C6E0060A389 /* simulation.cpp */; };
+		C10404F025F94C8C0060A389 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10404EE25F94C8C0060A389 /* OpenGL.framework */; };
+		C10404F125F94C8C0060A389 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10404EF25F94C8C0060A389 /* GLUT.framework */; };
+		C175B2102B1AAE5E0002D80E /* acceleration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C175B20B2B1AAE020002D80E /* acceleration.cpp */; };
+		C175B2112B1AAE5E0002D80E /* angle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C175B20E2B1AAE020002D80E /* angle.cpp */; };
+		C19F89862B2217290074D55A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19F89852B2216EA0074D55A /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C10404BB25F94BFA0060A389 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C10404BD25F94BFA0060A389 /* Lab12 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab12; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10404C925F94C6D0060A389 /* testPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testPosition.h; sourceTree = "<group>"; };
+		C10404CA25F94C6D0060A389 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		C10404CB25F94C6D0060A389 /* uiInteract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiInteract.cpp; sourceTree = "<group>"; };
+		C10404CC25F94C6D0060A389 /* uiDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiDraw.cpp; sourceTree = "<group>"; };
+		C10404CD25F94C6D0060A389 /* velocity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = velocity.h; sourceTree = "<group>"; };
+		C10404CE25F94C6D0060A389 /* howitzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = howitzer.h; sourceTree = "<group>"; };
+		C10404CF25F94C6D0060A389 /* uiDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiDraw.h; sourceTree = "<group>"; };
+		C10404D025F94C6D0060A389 /* ground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ground.h; sourceTree = "<group>"; };
+		C10404D125F94C6D0060A389 /* physics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = physics.cpp; sourceTree = "<group>"; };
+		C10404D225F94C6D0060A389 /* projectile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = projectile.cpp; sourceTree = "<group>"; };
+		C10404D525F94C6D0060A389 /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
+		C10404D625F94C6D0060A389 /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		C10404D725F94C6D0060A389 /* simulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simulation.h; sourceTree = "<group>"; };
+		C10404D825F94C6D0060A389 /* ground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ground.cpp; sourceTree = "<group>"; };
+		C10404D925F94C6D0060A389 /* velocity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = velocity.cpp; sourceTree = "<group>"; };
+		C10404DA25F94C6D0060A389 /* projectile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = projectile.h; sourceTree = "<group>"; };
+		C10404DC25F94C6D0060A389 /* physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = physics.h; sourceTree = "<group>"; };
+		C10404DD25F94C6D0060A389 /* uiInteract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiInteract.h; sourceTree = "<group>"; };
+		C10404DE25F94C6E0060A389 /* position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = position.h; sourceTree = "<group>"; };
+		C10404DF25F94C6E0060A389 /* simulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simulation.cpp; sourceTree = "<group>"; };
+		C10404E025F94C6E0060A389 /* testVelocity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testVelocity.h; sourceTree = "<group>"; };
+		C10404E125F94C6E0060A389 /* testPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testPhysics.h; sourceTree = "<group>"; };
+		C10404EE25F94C8C0060A389 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		C10404EF25F94C8C0060A389 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		C104FC462B182A99008887B0 /* unitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unitTest.h; sourceTree = "<group>"; };
+		C175B20A2B1AAE020002D80E /* testAngle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testAngle.h; sourceTree = "<group>"; };
+		C175B20B2B1AAE020002D80E /* acceleration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = acceleration.cpp; sourceTree = "<group>"; };
+		C175B20C2B1AAE020002D80E /* acceleration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = acceleration.h; sourceTree = "<group>"; };
+		C175B20D2B1AAE020002D80E /* angle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = angle.h; sourceTree = "<group>"; };
+		C175B20E2B1AAE020002D80E /* angle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = angle.cpp; sourceTree = "<group>"; };
+		C175B20F2B1AAE020002D80E /* testAcceleration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testAcceleration.h; sourceTree = "<group>"; };
+		C19F89852B2216EA0074D55A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C1B0EA5727E221C6004C9F71 /* testHowitzer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testHowitzer.h; sourceTree = "<group>"; };
+		C1B0EA5827E221C6004C9F71 /* testGround.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testGround.h; sourceTree = "<group>"; };
+		C1B0EA5927E221C6004C9F71 /* testProjectile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testProjectile.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C10404BA25F94BFA0060A389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10404F025F94C8C0060A389 /* OpenGL.framework in Frameworks */,
+				C10404F125F94C8C0060A389 /* GLUT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C10404B425F94BF90060A389 = {
+			isa = PBXGroup;
+			children = (
+				C19F89852B2216EA0074D55A /* main.cpp */,
+				C175B20B2B1AAE020002D80E /* acceleration.cpp */,
+				C175B20C2B1AAE020002D80E /* acceleration.h */,
+				C175B20E2B1AAE020002D80E /* angle.cpp */,
+				C175B20D2B1AAE020002D80E /* angle.h */,
+				C175B20F2B1AAE020002D80E /* testAcceleration.h */,
+				C175B20A2B1AAE020002D80E /* testAngle.h */,
+				C104FC462B182A99008887B0 /* unitTest.h */,
+				C10404D825F94C6D0060A389 /* ground.cpp */,
+				C10404D125F94C6D0060A389 /* physics.cpp */,
+				C10404D525F94C6D0060A389 /* position.cpp */,
+				C10404D225F94C6D0060A389 /* projectile.cpp */,
+				C10404DF25F94C6E0060A389 /* simulation.cpp */,
+				C10404D625F94C6D0060A389 /* test.cpp */,
+				C10404CC25F94C6D0060A389 /* uiDraw.cpp */,
+				C10404CB25F94C6D0060A389 /* uiInteract.cpp */,
+				C10404D925F94C6D0060A389 /* velocity.cpp */,
+				C10404D025F94C6D0060A389 /* ground.h */,
+				C10404CE25F94C6D0060A389 /* howitzer.h */,
+				C10404DC25F94C6D0060A389 /* physics.h */,
+				C10404DE25F94C6E0060A389 /* position.h */,
+				C10404DA25F94C6D0060A389 /* projectile.h */,
+				C10404D725F94C6D0060A389 /* simulation.h */,
+				C10404CA25F94C6D0060A389 /* test.h */,
+				C1B0EA5827E221C6004C9F71 /* testGround.h */,
+				C1B0EA5727E221C6004C9F71 /* testHowitzer.h */,
+				C10404E125F94C6E0060A389 /* testPhysics.h */,
+				C10404C925F94C6D0060A389 /* testPosition.h */,
+				C1B0EA5927E221C6004C9F71 /* testProjectile.h */,
+				C10404E025F94C6E0060A389 /* testVelocity.h */,
+				C10404CF25F94C6D0060A389 /* uiDraw.h */,
+				C10404DD25F94C6D0060A389 /* uiInteract.h */,
+				C10404CD25F94C6D0060A389 /* velocity.h */,
+				C10404ED25F94C8B0060A389 /* Frameworks */,
+				C10404BE25F94BFA0060A389 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C10404BE25F94BFA0060A389 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C10404BD25F94BFA0060A389 /* Lab12 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C10404ED25F94C8B0060A389 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C10404EF25F94C8C0060A389 /* GLUT.framework */,
+				C10404EE25F94C8C0060A389 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C10404BC25F94BFA0060A389 /* Lab12 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C10404C425F94BFA0060A389 /* Build configuration list for PBXNativeTarget "Lab12" */;
+			buildPhases = (
+				C10404B925F94BFA0060A389 /* Sources */,
+				C10404BA25F94BFA0060A389 /* Frameworks */,
+				C10404BB25F94BFA0060A389 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lab12;
+			productName = Lab12;
+			productReference = C10404BD25F94BFA0060A389 /* Lab12 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C10404B525F94BF90060A389 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C10404BC25F94BFA0060A389 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = C10404B825F94BF90060A389 /* Build configuration list for PBXProject "Lab12" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C10404B425F94BF90060A389;
+			productRefGroup = C10404BE25F94BFA0060A389 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C10404BC25F94BFA0060A389 /* Lab12 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C10404B925F94BFA0060A389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C19F89862B2217290074D55A /* main.cpp in Sources */,
+				C175B2102B1AAE5E0002D80E /* acceleration.cpp in Sources */,
+				C175B2112B1AAE5E0002D80E /* angle.cpp in Sources */,
+				C10404E525F94C6E0060A389 /* projectile.cpp in Sources */,
+				C10404E925F94C6E0060A389 /* ground.cpp in Sources */,
+				C10404E725F94C6E0060A389 /* position.cpp in Sources */,
+				C10404E225F94C6E0060A389 /* uiInteract.cpp in Sources */,
+				C10404E425F94C6E0060A389 /* physics.cpp in Sources */,
+				C10404EB25F94C6E0060A389 /* simulation.cpp in Sources */,
+				C10404E825F94C6E0060A389 /* test.cpp in Sources */,
+				C10404EA25F94C6E0060A389 /* velocity.cpp in Sources */,
+				C10404E325F94C6E0060A389 /* uiDraw.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C10404C225F94BFA0060A389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C10404C325F94BFA0060A389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C10404C525F94BFA0060A389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C10404C625F94BFA0060A389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C10404B825F94BF90060A389 /* Build configuration list for PBXProject "Lab12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10404C225F94BFA0060A389 /* Debug */,
+				C10404C325F94BFA0060A389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C10404C425F94BFA0060A389 /* Build configuration list for PBXNativeTarget "Lab12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10404C525F94BFA0060A389 /* Debug */,
+				C10404C625F94BFA0060A389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C10404B525F94BF90060A389 /* Project object */;
+}
