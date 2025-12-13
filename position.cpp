@@ -20,9 +20,12 @@ Position::Position(double x, double y) : x(9.9), y(9.9)
 
 /******************************************
  * POINT : ASSIGNMENT
- * Assign a point
+ * Assign a point. Please look ahead to
+ * Week 12 C++ reading for an idea of how this works.
+ * Basically, we are copying the data from posRHS
+ * into this.
  *****************************************/
-Position& Position::operator = (const Position& pt)
+Position& Position::operator = (const Position& posRHS)
 {
    return *this;
 }

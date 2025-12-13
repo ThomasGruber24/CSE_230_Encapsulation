@@ -129,11 +129,12 @@ private:
    void areaFromRadius_zero()
    {  // setup
       double radius = 0.0;
-      double area = -999.99;
+      double area = 0.0;
       // exercise
       area = areaFromRadius(radius);
       // verify
       assertEquals(area, 0.0);
+      assertEquals(radius, 0.0);
    }  // teardown
    
    /*******************************************************
@@ -145,11 +146,12 @@ private:
    void areaFromRadius_one()
    {  // setup
       double radius = 1.0;
-      double area = -999.99;
+      double area = M_PI;
       // exercise
       area = areaFromRadius(radius);
       // verify
       assertEquals(area, M_PI);
+      assertEquals(radius, 1.0);
    }  // teardown
 
    /*******************************************************
@@ -161,11 +163,12 @@ private:
    void areaFromRadius_two()
    {  // setup
       double radius = 2.0;
-      double area = -999.99;
+      double area = M_PI * (radius * radius);
       // exercise
       area = areaFromRadius(radius);
       // verify
-      assertEquals(area, M_PI * 4.0);
+      assertEquals(area, M_PI * (radius * radius));
+      assertEquals(radius, 2.0);
    }  // teardown
 
    /*******************************************************
@@ -177,11 +180,12 @@ private:
    void areaFromRadius_projectile()
    {  // setup
       double radius = 0.077545; // radius of the M795 projectile
-      double area = -999.99;
+      double area = 0.018891109;
       // exercise
       area = areaFromRadius(radius);
       // verify
-      assertEquals(area, .018891109);
+      assertEquals(area, 0.018891109);
+      assertEquals(radius, 0.077545);
    }  // teardown
 
 
@@ -217,6 +221,10 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, 0.0);
+      assertEquals(density, 1.0);
+      assertEquals(drag, 1.0);
+      assertEquals(radius, 1.0);
+      assertEquals(velocity, 0.0);
    }  // teardown
 
     /*******************************************************
@@ -235,6 +243,10 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, 0.0);
+      assertEquals(density, 1.0);
+      assertEquals(drag, 1.0);
+      assertEquals(radius, 0.0);
+      assertEquals(velocity, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -253,6 +265,10 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, 0.0);
+      assertEquals(density, 1.0);
+      assertEquals(drag, 0.0);
+      assertEquals(radius, 1.0);
+      assertEquals(velocity, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -271,6 +287,10 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, 0.0);
+      assertEquals(density, 0.0);
+      assertEquals(drag, 1.0);
+      assertEquals(radius, 1.0);
+      assertEquals(velocity, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -289,6 +309,10 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, 0.5 * M_PI);
+      assertEquals(density, 1.0);
+      assertEquals(drag, 1.0);
+      assertEquals(radius, 1.0);
+      assertEquals(velocity, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -307,7 +331,11 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, M_PI);
-   }  // teardown
+      assertEquals(density, 2.0);
+      assertEquals(drag, 1.0);
+      assertEquals(radius, 1.0);
+      assertEquals(velocity, 1.0);
+  }  // teardown
 
     /*******************************************************
      * FORCE FROM DRAG - two drag
@@ -325,6 +353,10 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, M_PI);
+      assertEquals(density, 1.0);
+      assertEquals(drag, 2.0);
+      assertEquals(radius, 1.0);
+      assertEquals(velocity, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -343,6 +375,10 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, M_PI * 2.0);
+      assertEquals(density, 1.0);
+      assertEquals(drag, 1.0);
+      assertEquals(radius, 2.0);
+      assertEquals(velocity, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -361,6 +397,10 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, M_PI * 2.0);
+      assertEquals(density, 1.0);
+      assertEquals(drag, 1.0);
+      assertEquals(radius, 1.0);
+      assertEquals(velocity, 2.0);
    }  // teardown
 
     /*******************************************************
@@ -382,6 +422,10 @@ private:
       force = forceFromDrag(density, drag, radius, velocity);
       // verify
       assertEquals(force, 1137.4168762);
+      assertEquals(density, 0.4135000);
+      assertEquals(drag, 0.4258);
+      assertEquals(radius, 0.077545);
+      assertEquals(velocity, 827.0);
    }  // teardown
 
 
@@ -412,6 +456,8 @@ private:
       acceleration = accelerationFromForce(force, mass);
       // verify
       assertEquals(acceleration, 0.0);
+      assertEquals(force, 0.0);
+      assertEquals(mass, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -428,6 +474,8 @@ private:
       acceleration = accelerationFromForce(force, mass);
       // verify
       assertEquals(acceleration, 1.0);
+      assertEquals(force, 1.0);
+      assertEquals(mass, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -444,6 +492,8 @@ private:
       acceleration = accelerationFromForce(force, mass);
       // verify
       assertEquals(acceleration, 2.0);
+      assertEquals(force, 2.0);
+      assertEquals(mass, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -460,6 +510,8 @@ private:
       acceleration = accelerationFromForce(force, mass);
       // verify
       assertEquals(acceleration, 0.5);
+      assertEquals(force, 1.0);
+      assertEquals(mass, 2.0);
    }  // teardown
 
     /*******************************************************
@@ -477,6 +529,9 @@ private:
       acceleration = accelerationFromForce(force, mass);
       // verify
       assertEquals(acceleration, 24.355821);
+      assertEquals(force, 1137.4168762);
+      assertEquals(mass, 46.7);
+
    }  // teardown
 
 
@@ -509,6 +564,8 @@ private:
       velocity = velocityFromAcceleration(acceleration, time);
       // verify
       assertEquals(velocity, 0.0);
+      assertEquals(acceleration, 0.0);
+      assertEquals(time, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -525,6 +582,8 @@ private:
       velocity = velocityFromAcceleration(acceleration, time);
       // verify
       assertEquals(velocity, 0.0);
+      assertEquals(acceleration, 1.0);
+      assertEquals(time, 0.0);
    }  // teardown
 
     /*******************************************************
@@ -541,6 +600,8 @@ private:
       velocity = velocityFromAcceleration(acceleration, time);
       // verify
       assertEquals(velocity, 1.0);
+      assertEquals(acceleration, 1.0);
+      assertEquals(time, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -557,6 +618,8 @@ private:
       velocity = velocityFromAcceleration(acceleration, time);
       // verify
       assertEquals(velocity, 2.0);
+      assertEquals(acceleration, 2.0);
+      assertEquals(time, 1.0);
    }  // teardown
 
     /*******************************************************
@@ -573,8 +636,9 @@ private:
       velocity = velocityFromAcceleration(acceleration, time);
       // verify
       assertEquals(velocity, 2.0);
+      assertEquals(acceleration, 1.0);
+      assertEquals(time, 2.0);
    }  // teardown
-
 
    /*****************************************************************
     *****************************************************************
@@ -613,7 +677,19 @@ private:
     *********************************************************/
    void linearInterpolation_coordinatesZero()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      // setup
+	   double d0 = 0.0;
+	   double r0 = 0.0;
+	   double d1 = 8.0;
+	   double r1 = 8.0;
+	   double d = 0.0;
+
+	   // exercise
+	   double r = linearInterpolation(d0, r0, d1, r1, d);
+
+	   // verify
+	   assertEquals(r, 0.0);
+	   assertEquals(d0, 0.0);
    }
 
    /*********************************************************
@@ -629,7 +705,9 @@ private:
     *********************************************************/
    void linearInterpolation_coordinatesOne()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double r = linearInterpolation(0.0, 0.0, 8.0, 8.0, 8.0);
+
+	   assertEquals(r, 8.0);
    }
 
    /*********************************************************
@@ -645,7 +723,9 @@ private:
     *********************************************************/
    void linearInterpolation_coordinatesMiddle()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double r = linearInterpolation(0.0, 0.0, 8.0, 8.0, 4.0);
+
+	   assertEquals(r, 4.0);
    }
 
    /*********************************************************
@@ -661,11 +741,13 @@ private:
     *********************************************************/
    void linearInterpolation_coordinatesTop()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double r = linearInterpolation(0.0, 0.0, 8.0, 8.0, 6.0);
+
+	   assertEquals(r, 6.0);
    }
 
    /*********************************************************
-    * LINEAR INTERPOLATION - coordinate version where (d,r) is near one
+    * LINEAR INTERPOLATION - coordinate version slope of line is negative
     *
     *    | 1,9 * (d0,r0)
     *    |      \
@@ -678,7 +760,9 @@ private:
     *********************************************************/
    void linearInterpolation_coordinatesBackwards()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double r = linearInterpolation(1.0, 9.0, 7.0, -3.0, 3.0);
+        
+	   assertEquals(r, 5.0);
    }
 
 
@@ -725,6 +809,7 @@ private:
       // exercise
       r = linearInterpolation(mapping, 4 /*numMapping*/, d);
       // verify
+      assertEquals(d, 1.0);
       assertEquals(r, 2.0);
    }  // teardown
 
@@ -744,7 +829,17 @@ private:
     *********************************************************/
    void linearInterpolation_mappingTwo()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+	  };
+
+      double r = linearInterpolation(mapping, 4, 7.0);
+
+	  assertEquals(r, 5.0);
    }
 
 
@@ -764,7 +859,17 @@ private:
     *********************************************************/
    void linearInterpolation_mappingMid01()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+       const Mapping mapping[] =
+	   { // d    r
+		  {1.0, 2.0},  // mapping[0]
+		  {3.0, 3.0},  // mapping[1]
+		  {7.0, 5.0},  // mapping[2]
+		  {8.0, 6.5}   // mapping[3]
+       };
+
+       double r = linearInterpolation(mapping, 4, 2.0);
+
+       assertEquals(r, 2.5);
    }
 
 
@@ -784,7 +889,16 @@ private:
     *********************************************************/
    void linearInterpolation_mappingTop01()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+	  };
+
+      double r = linearInterpolation(mapping, 4, 2.8);
+	  assertEquals(r, 2.9);
    }
 
 
@@ -792,7 +906,7 @@ private:
     * LINEAR INTERPOLATION - mapping closer to [2] than [3]
     *
     *    |        8,6.5 * mapping[3]
-    *    |     7.3,5.5 * (d,r)
+    *    |     7.33333333,5.5 * (d,r)
     *    |      7,5   * mapping[2]
     *    |          /
     *    |       /
@@ -804,7 +918,17 @@ private:
     *********************************************************/
    void linearInterpolation_mappinglower23()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+       const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+      };
+
+	   double r = linearInterpolation(mapping, 4, 7.33333333);
+
+	   assertEquals(r, 5.5);
    }
 
 
@@ -825,7 +949,17 @@ private:
     *********************************************************/
    void linearInterpolation_mappingSmall()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+       const Mapping mapping[] =
+       { // d    r
+          {1.0, 2.0},   // mapping[0]
+          {3.0, 3.0},   // mapping[1]
+          {7.0, 5.0},   // mapping[2]
+          {8.0, 6.5}    // mapping[3]
+       };
+
+       double r = linearInterpolation(mapping, 4, 0.0);
+
+	   assertEquals(r, 0.5);
    }
 
 
@@ -846,7 +980,17 @@ private:
     *********************************************************/
    void linearInterpolation_mappingLarge()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+      const Mapping mapping[] =
+      { // d    r
+         {1.0, 2.0},   // mapping[0]
+         {3.0, 3.0},   // mapping[1]
+         {7.0, 5.0},   // mapping[2]
+         {8.0, 6.5}    // mapping[3]
+	  };
+
+	  double r = linearInterpolation(mapping, 4, 50.0);
+
+	  assertEquals(r, 9.25);
    }
 
 
@@ -866,64 +1010,100 @@ private:
      ********************************************************/
    void gravityFromAltitude_0()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 0.0;
+	   double gravity = 9.807;
+       
+	   gravity = gravityFromAltitude(altitude);
+
+	   assertEquals(altitude, 0.0);
+	   assertEquals(gravity, 9.807);
    }
 
 
     /*******************************************************
      * GRAVITY FROM ALTITUDE - exactly on 10,000 meters
-     * input:  altitude=10,000m
+     * input:  altitude=10000m
      * output: gravity=9.776
      ********************************************************/
    void gravityFromAltitude_10000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 10000.0;
+	   double gravity = 9.776;
+
+	   gravity = gravityFromAltitude(altitude);
+
+	   assertEquals(altitude, 10000.0);
+	   assertEquals(gravity, 9.776);
    }
 
     /*******************************************************
      * GRAVITY FROM ALTITUDE - at the high range, 80,000m
-     * input:  altitude=80,000m
+     * input:  altitude=80000m
      * output: gravity=9.564
      ********************************************************/
    void gravityFromAltitude_80000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 80000.0;
+	   double gravity = 9.564;
+
+	   gravity = gravityFromAltitude(altitude);
+
+	   assertEquals(altitude, 80000.0);
+	   assertEquals(gravity, 9.564);
    }
 
     /*******************************************************
-     * GRAVITY FROM ALTITUDE - exactly between two values, 5,5000m
-     * input:  altitude=5,5000m
-     * output: gravity=9.795
+     * GRAVITY FROM ALTITUDE - exactly between two values, 5,500m
+     * input:  altitude=5500m
+     * output: gravity=9.7895
      ********************************************************/
    void gravityFromAltitude_5500()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 5500.0;
+	   double gravity = 9.7895;
+
+	   gravity = gravityFromAltitude(altitude);
+
+	   assertEquals(altitude, 5500.0);
+	   assertEquals(gravity, 9.7895);
    }
 
     /*******************************************************
      * GRAVITY FROM ALTITUDE - one-third between two values, 43,333.3m
      * input:  altitude=43,333m
-     * output: gravity=9.795
+     * output: gravity=9.674
      ********************************************************/
    void gravityFromAltitude_43333()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 43333.3;
+	   double gravity = 9.674;
+
+	   gravity = gravityFromAltitude(altitude);
+
+	   assertEquals(altitude, 43333.3);
+	   assertEquals(gravity, 9.674);
    }
 
     /*******************************************************
      * GRAVITY FROM ALTITUDE - two-third between two values, 3,666.6m
-     * input:  altitude=3,666.6m
+     * input:  altitude=3666.6m
      * output: gravity=9.795
      ********************************************************/
    void gravityFromAltitude_3666()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 3666.6;
+	   double gravity = 9.795;
+
+	   gravity = gravityFromAltitude(altitude);
+
+	   assertEquals(altitude, 3666.6);
+	   assertEquals(gravity, 9.795);
    }
 
     /*******************************************************
      * GRAVITY FROM ALTITUDE - elevation of Mt Everest, 8,848.86m
      * input:  altitude=8,848.86m
-     * output: gravity=9.795
+     * output: gravity=9.77945
      ********************************************************/
    void gravityFromAltitude_8848()
    {  // setup
@@ -932,7 +1112,8 @@ private:
       // exercise
       gravity = gravityFromAltitude(altitude);
       // verify
-      assertEquals(gravity, 9.77945);
+      assertEquals(altitude, 8848.86);
+      assertEquals(gravity,  9.77945);
    }  // teardown
 
 
@@ -952,37 +1133,62 @@ private:
      ********************************************************/
    void densityFromAltitude_0()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 0.0;
+	   double density = 1.225;
+
+	   density = densityFromAltitude(altitude);
+
+	   assertEquals(altitude, 0.0);
+	   assertEquals(density, 1.225);
+
    }
 
     /*******************************************************
      * DENSITY FROM ALTITUDE - exactly on 10,000 meters
-     * input:  altitude=10,000m
+     * input:  altitude=10000m
      * output: density=0.4135000
      ********************************************************/
    void densityFromAltitude_10000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 10000.0;
+	   double density = 0.4135000;
+
+	   density = densityFromAltitude(altitude);
+
+	   assertEquals(altitude, 10000.0);
+	   assertEquals(density, 0.4135000);
    }
 
     /*******************************************************
      * DENSITY FROM ALTITUDE - at the high range, 80,000m
-     * input:  altitude=80,000m
+     * input:  altitude=80000m
      * output: density=0.0000185
      ********************************************************/
    void densityFromAltitude_80000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 80000.0;
+	   double density = 0.0000185;
+
+	   density = densityFromAltitude(altitude);
+
+	   assertEquals(altitude, 80000.0);
+	   assertEquals(density, 0.0000185);
    }
 
     /*******************************************************
      * DENSITY FROM ALTITUDE - exactly between two values, 5,5000m
-     * input:  altitude=5,5000m
+     * input:  altitude=5500m
      * output: density=0.69825
      ********************************************************/
    void densityFromAltitude_5500()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 5500.0;
+	   double density = 0.69825;
+
+	   density = densityFromAltitude(altitude);
+
+	   assertEquals(altitude, 5500.0);
+	   assertEquals(density, 0.69825);
    }
 
     /*******************************************************
@@ -992,22 +1198,34 @@ private:
      ********************************************************/
    void densityFromAltitude_43333()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 43333.3;
+	   double density = 0.0030063;
+
+	   density = densityFromAltitude(altitude);
+
+	   assertEquals(altitude, 43333.3);
+	   assertEquals(density, 0.0030063);
    }
 
     /*******************************************************
      * DENSITY FROM ALTITUDE - two-third between two values, 3,666.6m
-     * input:  altitude=3,666.6m
+     * input:  altitude=3666.6m
      * output: density=0.849372
      ********************************************************/
    void densityFromAltitude_3666()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 3666.6;
+	   double density = 0.849372;
+
+	   density = densityFromAltitude(altitude);
+
+	   assertEquals(altitude, 3666.6);
+	   assertEquals(density, 0.849372);
    }
 
     /*******************************************************
      * DENSITY FROM ALTITUDE - elevation of Mt Everest, 8,848.86m
-     * input:  altitude=8,848.86m
+     * input:  altitude=8848.86m
      * output: density= 0.4759719  1/3 that of sea level
      ********************************************************/
    void densityFromAltitude_8848()
@@ -1017,7 +1235,8 @@ private:
       // exercise
       density = densityFromAltitude(altitude);
       // verify
-      assertEquals(density, 0.4759719);
+      assertEquals(altitude, 8848.86);
+      assertEquals(density,  0.4759719);
    }  // teardown
    
 
@@ -1036,62 +1255,98 @@ private:
      ********************************************************/
    void speedSoundFromAltitude_0()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 0.0;
+	   double speed = 340.0;
+
+	   speed = speedSoundFromAltitude(altitude);
+
+	   assertEquals(altitude, 0.0);
+	   assertEquals(speed, 340.0);
    }
 
     /*******************************************************
      * SPEED OF SOUND FROM ALTITUDE : 10,000m
-     * input:  altitude=10,000m
-     * output: 299m/s
+     * input:  altitude=10000m
+     * output: 299.0m/s
      ********************************************************/
    void speedSoundFromAltitude_10000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 10000.0;
+	   double speed = 299.0;
+
+	   speed = speedSoundFromAltitude(altitude);
+
+	   assertEquals(altitude, 10000.0);
+	   assertEquals(speed, 299.0);
    }
 
     /*******************************************************
      * SPEED OF SOUND FROM ALTITUDE : 80,000m
-     * input:  altitude=80,000m
-     * output: 269m/s
+     * input:  altitude=80000m
+     * output: 269.0m/s
      ********************************************************/
    void speedSoundFromAltitude_80000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 80000.0;
+	   double speed = 269.0;
+
+	   speed = speedSoundFromAltitude(altitude);
+
+	   assertEquals(altitude, 80000.0);
+	   assertEquals(speed, 269.0);
    }
 
     /*******************************************************
      * SPEED OF SOUND FROM ALTITUDE : 5,500m
-     * input:  altitude=5,500
+     * input:  altitude=5500
      * output: 318.0m/s
      ********************************************************/
    void speedSoundFromAltitude_5500()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 5500.0;
+	   double speed = 318.0;
+
+	   speed = speedSoundFromAltitude(altitude);
+
+	   assertEquals(altitude, 5500.0);
+	   assertEquals(speed, 318.0);
    }
 
     /*******************************************************
      * SPEED OF SOUND FROM ALTITUDE : 43,333m
-     * input:  altitude=43,333m
-     * output: 328.3m/s
+     * input:  altitude=43333.0m
+     * output: 328.3329m/s
      ********************************************************/
    void speedSoundFromAltitude_43333()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 43333.0;
+	   double speed = 328.3329;
+
+	   speed = speedSoundFromAltitude(altitude);
+
+	   assertEquals(altitude, 43333.0);
+	   assertEquals(speed, 328.3329);
    }
 
     /*******************************************************
      * SPEED OF SOUND FROM ALTITUDE : 3,666m
-     * input:  altitude=3,666m
-     * output: 325.3m/s
+     * input:  altitude=3666.0m
+     * output: 325.336m/s
      ********************************************************/
    void speedSoundFromAltitude_3666()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double altitude = 3666.0;
+	   double speed = 325.336;
+
+	   speed = speedSoundFromAltitude(altitude);
+
+	   assertEquals(altitude, 3666.0);
+	   assertEquals(speed, 325.336);
    }
 
     /*******************************************************
      * SPEED OF SOUND FROM ALTITUDE : on top of Mount Everest
-     * input:  altitude=8,848m
+     * input:  altitude=8848.0m
      * output: 303.76m/s
      ********************************************************/
    void speedSoundFromAltitude_8848()
@@ -1101,7 +1356,8 @@ private:
       // exercise
       speed = speedSoundFromAltitude(altitude);
       // verify
-      assertEquals(speed, 303.76);
+      assertEquals(altitude, 8848.0);
+      assertEquals(speed,    303.76);
    }  // teardown
 
    /*****************************************************************
@@ -1119,7 +1375,13 @@ private:
      ********************************************************/
    void dragFromMach_000()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double speedMach = 0.0;
+	   double drag = -99.99;
+
+	   drag = dragFromMach(speedMach);
+
+	   assertEquals(speedMach, 0.0);
+	   assertEquals(drag, 0.0);
    }
 
     /*******************************************************
@@ -1129,7 +1391,13 @@ private:
      ********************************************************/
    void dragFromMach_500()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double speedMach = 5.0;
+	   double drag = -99.99;
+
+	   drag = dragFromMach(speedMach);
+
+	   assertEquals(speedMach, 5.0);
+	   assertEquals(drag, 0.2656);
    }
 
     /*******************************************************
@@ -1139,7 +1407,13 @@ private:
      ********************************************************/
    void dragFromMach_100()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double speedMach = 1.0;
+	   double drag = -99.99;
+
+	   drag = dragFromMach(speedMach);
+
+	   assertEquals(speedMach, 1.0);
+	   assertEquals(drag, 0.4258);
    }
 
     /*******************************************************
@@ -1149,32 +1423,45 @@ private:
      ********************************************************/
    void dragFromMach_060()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double speedMach = 0.6;
+	   double drag = -99.99;
+
+	   drag = dragFromMach(speedMach);
+
+	   assertEquals(speedMach, 0.6);
+	   assertEquals(drag, 0.1845);
    }
 
     /*******************************************************
      * DRAG FROM MACH : one third between 0 and .3
      * input:  speed=0.1mach
-     * output: 00.0543
+     * output: 0.0543
      ********************************************************/
    void dragFromMach_010()
    {
-      assertUnit(NOT_YET_IMPLEMENTED);
+	   double speedMach = 0.1;
+	   double drag = -99.99;
+
+	   drag = dragFromMach(speedMach);
+
+	   assertEquals(speedMach, 0.1);
+	   assertEquals(drag, 0.0543);
    }
 
     /*******************************************************
      * DRAG FROM MACH : random spot
      * input:  speed=3.14159mach
-     * output: 00.0543
+     * output: 0.2347
      ********************************************************/
    void dragFromMach_314()
    {  // setup
-      double speedMach = 0.1;
+      double speedMach = 3.14159;
       double drag = -99.99;
       // exercise
       drag = dragFromMach(speedMach);
       // verify
-      assertEquals(drag, 0.0543);
+      assertEquals(speedMach, 3.14159);
+      assertEquals(drag,      0.2347);
    }  // teardown
 
 };

@@ -1,0 +1,128 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|solutionrelative:projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\simulation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|solutionrelative:simulation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\testHowitzer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|solutionrelative:testHowitzer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\testProjectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|solutionrelative:testProjectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|solutionrelative:projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\howitzer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B2AD1A6B-78BD-4EFD-99F1-99D23E90C15A}|Lab12.vcxproj|solutionrelative:howitzer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "projectile.cpp",
+              "DocumentMoniker": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\projectile.cpp",
+              "RelativeDocumentMoniker": "projectile.cpp",
+              "ToolTip": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\projectile.cpp",
+              "RelativeToolTip": "projectile.cpp",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-06T19:29:19.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "simulation.cpp",
+              "DocumentMoniker": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\simulation.cpp",
+              "RelativeDocumentMoniker": "simulation.cpp",
+              "ToolTip": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\simulation.cpp",
+              "RelativeToolTip": "simulation.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-06T19:26:25.079Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "howitzer.h",
+              "DocumentMoniker": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\howitzer.h",
+              "RelativeDocumentMoniker": "howitzer.h",
+              "ToolTip": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\howitzer.h",
+              "RelativeToolTip": "howitzer.h",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAE4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-06T19:26:34.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "testHowitzer.h",
+              "DocumentMoniker": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\testHowitzer.h",
+              "RelativeDocumentMoniker": "testHowitzer.h",
+              "ToolTip": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\testHowitzer.h",
+              "RelativeToolTip": "testHowitzer.h",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAowEwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-06T19:26:57.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "testProjectile.h",
+              "DocumentMoniker": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\testProjectile.h",
+              "RelativeDocumentMoniker": "testProjectile.h",
+              "ToolTip": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\testProjectile.h",
+              "RelativeToolTip": "testProjectile.h",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-06T19:29:29.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "projectile.h",
+              "DocumentMoniker": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\projectile.h",
+              "RelativeDocumentMoniker": "projectile.h",
+              "ToolTip": "C:\\Users\\Thomas\\Documents\\School\\Fall 2025\\C\u002B\u002B\\Current Files\\projectile.h",
+              "RelativeToolTip": "projectile.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-06T20:23:09.624Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -62,7 +62,8 @@ private:
    /*********************************************
     * name:    DEFAULT CONSTRUCTOR
     * input:   nothing
-    * output:  zeros
+    * output:  dx=0.0
+    *          dy=0.0
     *********************************************/
    void constructor_default()
    {  // setup
@@ -77,7 +78,8 @@ private:
    /*********************************************
     * name:    NON-DEFAULT CONSTRUCTOR
     * input:   2.3, 4.5
-    * output:  (2.3, 4.5)
+    * output:  dx=2.3
+    *          dy=4.5
     *********************************************/
    void constructor_nonDefault()
    {  // setup
@@ -152,7 +154,7 @@ private:
 
    /*********************************************
     * name:    SET DDX
-    * input:   (-99.9, -88.8) 11.1
+    * input:   (-99.9, -88.8) setDDX(11.1)
     * output:  (11.1, -88.8)
     *********************************************/
    void setDDX()
@@ -171,7 +173,7 @@ private:
 
    /*********************************************
     * name:    SET DDX
-    * input:   (-99.9, -88.8) 11.1
+    * input:   (-99.9, -88.8) setDDY(11.1)
     * output:  (-99.9, 11.1)
     *********************************************/
    void setDDY()
@@ -190,7 +192,7 @@ private:
 
    /*********************************************
     * name:    SET UP
-    * input:   (-99.9, -88.8) 0 degrees, 3.3
+    * input:   (-99.9, -88.8) 0 degrees, 3.3=speed
     * output:  (0.0, 3.3)
     *********************************************/
    void set_up()
@@ -206,15 +208,15 @@ private:
       a.set(angle, magnitude);
 
       // verify
-      assertEquals(a.ddx, 0.0);
-      assertEquals(a.ddy, 3.3);
+      assertEquals(a.ddx, 0.0); // 0.0 = 3.3 sin(0)
+      assertEquals(a.ddy, 3.3); // 3.3 = 3.3 cos(0)
       assertEquals(angle.radians, 0.0);
       assertEquals(magnitude, 3.3);
    }
    
    /*********************************************
     * name:    SET DOWN
-    * input:   (-99.9, -88.8) 180 degrees, 3.3
+    * input:   (-99.9, -88.8) 180 degrees, 3.3=speed
     * output:  (0.0, -3.3)
     *********************************************/
    void set_down()
@@ -230,15 +232,15 @@ private:
       a.set(angle, magnitude);
 
       // verify
-      assertEquals(a.ddx, 0.0);
-      assertEquals(a.ddy,-3.3);
+      assertEquals(a.ddx, 0.0); //  0.0 = 3.3 sin(180)
+      assertEquals(a.ddy,-3.3); // -3.3 = 3.3 cos(180)
       assertEquals(angle.radians, M_PI);
       assertEquals(magnitude, 3.3);
    }
 
    /*********************************************
     * name:    SET RIGHT
-    * input:   (-99.9, -88.8) 90 degrees, 3.3
+    * input:   (-99.9, -88.8) 90 degrees, 3.3=speed
     * output:  (3.3, 0.0)
     *********************************************/
    void set_right()
@@ -254,15 +256,15 @@ private:
       a.set(angle, magnitude);
 
       // verify
-      assertEquals(a.ddx, 3.3);
-      assertEquals(a.ddy, 0.0);
+      assertEquals(a.ddx, 3.3); // 3.3 = 3.3 sin(90)
+      assertEquals(a.ddy, 0.0); // 0.0 = 3.3 cos(90)
       assertEquals(angle.radians, M_PI_2);
       assertEquals(magnitude, 3.3);
    }
    
    /*********************************************
     * name:    SET LEFT
-    * input:   (-99.9, -88.8) 270 degrees, 3.3
+    * input:   (-99.9, -88.8) 270 degrees, 3.3=speed
     * output:  (3.3, 0.0)
     *********************************************/
    void set_left()
@@ -278,15 +280,15 @@ private:
       a.set(angle, magnitude);
 
       // verify
-      assertEquals(a.ddx, -3.3);
-      assertEquals(a.ddy, 0.0);
+      assertEquals(a.ddx, -3.3); // -3.3 = 3.3 sin(270)
+      assertEquals(a.ddy, 0.0);  //  0.0 = 3.3 cos(270)
       assertEquals(angle.radians, M_PI_2 + M_PI);
       assertEquals(magnitude, 3.3);
    }
    
    /*********************************************
     * name:    SET DIAGONAL
-    * input:   (-99.9, -88.8) 57 degrees, 1.0
+    * input:   (-99.9, -88.8) 57 degrees, 1.0=speed
     * output:  (0.84, 0.54)
     *********************************************/
    void set_diagonal()
@@ -302,8 +304,8 @@ private:
       a.set(angle, magnitude);
 
       // verify
-      assertEquals(a.ddx, 0.8414);
-      assertEquals(a.ddy, 0.5403);
+      assertEquals(a.ddx, 0.8414); // 0.8414 = 1.0 sin(57)
+      assertEquals(a.ddy, 0.5403); // 0.5403 = 1.0 cos(57)
       assertEquals(angle.radians, 1.0);
       assertEquals(magnitude,1.0);
    }

@@ -261,7 +261,8 @@ private:
    /*********************************************
     * name:    GET SPEED DIAGONAL
     * input:   (3.0, -4.0)
-    * output:  5.0
+    * output:  5.0          __________
+    *                 5 = \/ 3^2 + 4^2
     *********************************************/
    void getSpeed_diagonal()
    {  // setup
@@ -287,7 +288,7 @@ private:
    
    /*********************************************
     * name:    SET DX
-    * input:   (99.9, 88.8) -1.1
+    * input:   (99.9, 88.8) setDX(-1.1)
     * output:  (-1.1, 88.8)
     *********************************************/
    void setDX()
@@ -308,7 +309,7 @@ private:
 
    /*********************************************
     * name:    SET DY
-    * input:   (99.9, 88.8) -1.1
+    * input:   (99.9, 88.8) setDY(-1.1)
     * output:  (99.9, -1.1)
     *********************************************/
    void setDY()
@@ -329,7 +330,7 @@ private:
    
    /*********************************************
     * name:    SET UP
-    * input:   (-99.9, -88.8) 0 degreess, 3.3
+    * input:   (-99.9, -88.8) 0 degrees, 3.3=speed
     * output:  (0.0, 3.3)
     *********************************************/
    void set_up()
@@ -345,15 +346,15 @@ private:
       v.set(angle, magnitude);
 
       // verify
-      assertEquals(v.dx, 0.0);
-      assertEquals(v.dy, 3.3);
+      assertEquals(v.dx, 0.0);  // 0.0 = 3.3 sin(0)
+      assertEquals(v.dy, 3.3);  // 3.3 = 3.3 cos(0)
       assertEquals(angle.radians, 0.0);
       assertEquals(magnitude, 3.3);
    }
    
    /*********************************************
     * name:    SET DOWN
-    * input:   (-99.9, -88.8) 180 degreess, 3.3
+    * input:   (-99.9, -88.8) 180 degrees, 3.3=speed
     * output:  (0.0, -3.3)
     *********************************************/
    void set_down()
@@ -369,15 +370,15 @@ private:
       v.set(angle, magnitude);
 
       // verify
-      assertEquals(v.dx, 0.0);
-      assertEquals(v.dy, -3.3);
+      assertEquals(v.dx, 0.0);   // 0    = 3.3 sin(180)
+      assertEquals(v.dy, -3.3);  // -3.3 = 3.3 cos(180)
       assertEquals(angle.radians, M_PI);
       assertEquals(magnitude, 3.3);
    }
 
    /*********************************************
     * name:    SET RIGHT
-    * input:   (-99.9, -88.8) 90 degreess, 3.3
+    * input:   (-99.9, -88.8) 90 degrees, 3.3=speed
     * output:  (3.3, 0.0)
     *********************************************/
    void set_right()
@@ -393,8 +394,8 @@ private:
       v.set(angle, magnitude);
 
       // verify
-      assertEquals(v.dx, 3.3);
-      assertEquals(v.dy, 0.0);
+      assertEquals(v.dx, 3.3); // 3.3 = 3.3 sin(90)
+      assertEquals(v.dy, 0.0); // 0.0 = 3.3 cos(90)
       assertEquals(angle.radians, M_PI_2);
       assertEquals(magnitude, 3.3);
    }
@@ -417,8 +418,8 @@ private:
       v.set(angle, magnitude);
 
       // verify
-      assertEquals(v.dx, -3.3);
-      assertEquals(v.dy, 0.0);
+      assertEquals(v.dx, -3.3); // -3.3 = 3.3 sin(270)
+      assertEquals(v.dy,  0.0); //  0.0 = 3.3 cos(270)
       assertEquals(angle.radians, M_PI_2 + M_PI);
       assertEquals(magnitude, 3.3);
    }
@@ -441,8 +442,8 @@ private:
       v.set(angle, magnitude);
 
       // verify
-      assertEquals(v.dx, 0.8414);
-      assertEquals(v.dy, 0.5403);
+      assertEquals(v.dx, 0.8414);  // 0.8414 = 1.0 sin(57)
+      assertEquals(v.dy, 0.5403);  // 0.5403 = 1.0 cos(57)
       assertEquals(angle.radians, 1.0);
       assertEquals(magnitude, 1.0);
    }
@@ -500,7 +501,7 @@ private:
    /*********************************************
     * name:    REVERSE DIAGONAL
     * input:   ( 123.456, -7.89)
-    * output:  (-123.456,  8.89)
+    * output:  (-123.456,  7.89)
     *********************************************/
    void reverse_diagonal()
    {
@@ -616,8 +617,8 @@ private:
       v.add(a, t);
 
       // verify
-      assertEquals(v.dx, 2.3);
-      assertEquals(v.dy, 4.5);
+      assertEquals(v.dx, 2.3); // 2.3 = 2.3 + 0.0 x 0
+      assertEquals(v.dy, 4.5); // 4.5 = 4.5 + 0.0 x 0
       assertEquals(a.ddx, 0.0);
       assertEquals(a.ddy, 0.0);
       assertEquals(t, 0.0);
@@ -642,8 +643,8 @@ private:
       v.add(a, t);
 
       // verify
-      assertEquals(v.dx, 2.3);
-      assertEquals(v.dy, 4.5);
+      assertEquals(v.dx, 2.3); // 2.3 = 2.3 + 6.0 x 0
+      assertEquals(v.dy, 4.5); // 4.5 = 4.5 + 7.0 x 0
       assertEquals(a.ddx, 6.0);
       assertEquals(a.ddy, 7.0);
       assertEquals(t, 0.0);
@@ -668,8 +669,8 @@ private:
       v.add(a, t);
 
       // verify
-      assertEquals(v.dx, 8.3);  // 2.3 + 6.0*1
-      assertEquals(v.dy, 11.5); // 4.5 + 7.0*1
+      assertEquals(v.dx, 8.3);  //  8.3 = 2.3 + 6.0 x 1
+      assertEquals(v.dy, 11.5); // 11.5 = 4.5 + 7.0 x 1
       assertEquals(a.ddx, 6.0);
       assertEquals(a.ddy, 7.0);
       assertEquals(t, 1.0);
@@ -694,8 +695,8 @@ private:
       v.add(a, t);
 
       // verify
-      assertEquals(v.dx, 14.3); // 2.3 + 3.0*4
-      assertEquals(v.dy, 24.5); // 4.5 + 5.0*4
+      assertEquals(v.dx, 14.3); // 14.3 = 2.3 + 3.0 x 4
+      assertEquals(v.dy, 24.5); // 24.5 = 4.5 + 5.0 x 4
       assertEquals(a.ddx, 3.0);
       assertEquals(a.ddy, 5.0);
       assertEquals(t, 4.0);

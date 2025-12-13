@@ -78,7 +78,7 @@ private:
    /*********************************************
     * name:    DEFAULT CONSTRUCTOR
     * input:   nothing
-    * output:  pos=(0, 0))
+    * output:  pos=(0, 0)
     *********************************************/
    void construct_default()
    {
@@ -193,10 +193,10 @@ private:
    
    /*********************************************
     * name:    GET ZOOM : another variable
-    * input:   pos1.metersFromPixels=99.9
-    *          pos2.metersFromPixels=123.4
+    * input:   pos1.metersFromPixels=99.9  (set this first)
+    *          pos2.metersFromPixels=123.4 (set this second)
     * output:  zoom=123.4
-    *          pos1.metersFromPixels=123.4
+    *          pos1.metersFromPixels=123.4 (last assignment sticks)
     *          pos2.metersFromPixels=123.4
     *********************************************/
    void getZoom_anotherVariable()
@@ -207,7 +207,7 @@ private:
 
    /*********************************************
     * name:    GET METERS X
-    * input:   pos=(4500.0, 2500.0)
+    * input:   pos=(4500.0, 2500.0)   Store meters internally
     * output:  x=4500.0
     *********************************************/
    void getMetersX()
@@ -232,7 +232,7 @@ private:
    /*********************************************
     * name:    GET METERS Y
     * input:   pos=(4500.0, 2500.0)
-    * output:  y=4500.0
+    * output:  y=2500.0
     *********************************************/
    void getMetersY()
    {
@@ -264,7 +264,8 @@ private:
    }
    
    /*********************************************
-    * name:    GET METERS X ZOOM
+    * name:    GET PIXELS X ZOOM
+    *          pixels = meters / metersFromPixels
     * input:   pos=(123.4, 567.8) metersFromPixels=100
     * output:  x=1.234
     *********************************************/
@@ -274,7 +275,7 @@ private:
    }
 
    /*********************************************
-    * name:    GET METERS Y NO ZOOM
+    * name:    GET PIXELS Y NO ZOOM
     * input:   pos=(123.4, 567.8) metersFromPixels=1
     * output:  y=567.8
     *********************************************/
@@ -284,9 +285,9 @@ private:
    }
 
    /*********************************************
-    * name:    GET METERS Y ZOOM
+    * name:    GET PIXELS Y ZOOM
     * input:   pos=(123.4, 567.8) metersFromPixels=100
-    * output:  y=567.8
+    * output:  y=5.678
     *********************************************/
    void getPixelsY_zoom()
    {
@@ -300,7 +301,8 @@ private:
     *****************************************************************/
    
    /*********************************************
-    * name:    SET METERS Y
+    * name:    SET METERS X
+    *          We store pixels internally
     * input:   pos=(999.9, 888.8) x = 123.4
     * output:  pos=(123.4, 888.8)
     *********************************************/
@@ -322,7 +324,7 @@ private:
    }
 
    /*********************************************
-    * name:    GET METERS Y ZOOM
+    * name:    GET METERS Y 
     * input:   pos=(999.9, 888.8) y = 123.4
     * output:  pos=(999.9, 123.4)
     *********************************************/
@@ -344,8 +346,9 @@ private:
    }
 
    /*********************************************
-    * name:    SET METERS X NO ZOOM
-    * input:   pos=(999.9, 888.8) x=123.4 zoom=1
+    * name:    SET PIXELS X NO ZOOM
+    *          When meterFromPixels == 1, pixels and meters are the same
+    * input:   pos=(999.9, 888.8) x=123.4 meterFromPixels=1
     * output:  pos=(123.4, 888.8)
     *********************************************/
    void setPixelsX_noZoom()
@@ -354,9 +357,10 @@ private:
    }
 
    /*********************************************
-    * name:    SET METERS X ZOOM
-    * input:   pos=(999.9, 888.8) x=123.4 zoom=100
-    * output:  pos=(123.4, 888.8)
+    * name:    SET PIXELS X ZOOM
+    *          meters = pixels * metersFromPixels
+    * input:   pos=(999.9, 888.8) x=123.4 meterFromPixels=100
+    * output:  pos=(12340.0, 888.8)
     *********************************************/
    void setPixelsX_zoom()
    {
@@ -364,8 +368,8 @@ private:
    }
    
    /*********************************************
-    * name:    SET METERS Y NO ZOOM
-    * input:   pos=(999.9, 888.8) y=123.4 zoom=1
+    * name:    SET PIXELS Y NO ZOOM
+    * input:   pos=(999.9, 888.8) y=123.4 meterFromPixels=1
     * output:  pos=(999.9, 123.4)
     *********************************************/
    void setPixelsY_noZoom()
@@ -374,9 +378,9 @@ private:
    }
 
    /*********************************************
-    * name:    SET METERS Y ZOOM
-    * input:   pos=(999.9, 888.8) y=123.4 zoom=100
-    * output:  pos=(999.9, 123.4)
+    * name:    SET PIXELS Y ZOOM
+    * input:   pos=(999.9, 888.8) y=123.4 meterFromPixels=100
+    * output:  pos=(999.9, 12340.0)
     *********************************************/
    void setPixelsY_zoom()
    {
@@ -404,8 +408,8 @@ private:
    }
 
    /*********************************************
-    * name:    ADD METERS X ZERO ZOOM
-    * input:   pos=(4500,2500) x=3pixels zoom=1.0
+    * name:    ADD PIXELS X ZERO ZOOM
+    * input:   pos=(4500,2500) x=3pixels meterFromPixels=1.0
     * output:  pos=(4503,2500)
     *********************************************/
    void addPixelsX_noZoom()
@@ -414,9 +418,9 @@ private:
    }
 
    /*********************************************
-    * name:    ADD METERS X ZERO ZOOM
-    * input:   pos=(4500,2500) x=3pixels zoom=50.0
-    * output:  pos=(4623.4,2500)
+    * name:    ADD PIXELS X ZOOM
+    * input:   pos=(4500,2500) x=3pixels meterFromPixels=50.0
+    * output:  pos=(4650,2500)
     *********************************************/
    void addPixelsX_zoom()
    {
@@ -424,9 +428,9 @@ private:
    }
 
    /*********************************************
-    * name:    ADD METERS Y ZERO ZOOM
-    * input:   pos=(4500,2500) y=3pixels zoom=1.0
-    * output:  pos=(4503,2500)
+    * name:    ADD PIXELS Y ZERO ZOOM
+    * input:   pos=(4500,2500) y=3pixels meterFromPixels=1.0
+    * output:  pos=(4500,2503)
     *********************************************/
    void addPixelsY_noZoom()
    {
@@ -434,9 +438,9 @@ private:
    }
 
    /*********************************************
-    * name:    ADD METERS Y ZERO ZOOM
-    * input:   pos=(4500,2500) y=3pixels zoom=50.0
-    * output:  pos=(4503,2500)
+    * name:    ADD PIXELS Y ZOOM
+    * input:   pos=(4500,2500) y=3pixels meterFromPixels=50.0
+    * output:  pos=(4500,2650)
     *********************************************/
    void addPixelsY_zoom()
    {
@@ -467,39 +471,6 @@ private:
    {
       assertUnit(NOT_YET_IMPLEMENTED);
    }
-
-   // Double classes to test Position and avoid testing Velocity
-
-   // Note that Velocity0 ALWAYS returns v=(0.0,0.0)
-   class Velocity0 : public VelocityDummy
-   {
-      double getDX()  const { return 0.0; }
-      double getDY()  const { return 0.0; }
-   };
-
-   // Note that Velocity54 ALWAYS returns v=(0.5,0.4)
-   class Velocity54 : public VelocityDummy
-   {
-      double getDX()  const { return 0.5; }
-      double getDY()  const { return 0.4; }
-   };
-
-   // Double classes to test Position and avoid testing Acceleration
-
-   // Note that Acceleration0 ALWAYS returns a=(0.0,0.0)
-   class Acceleration0 : public AccelerationDummy
-   {
-      double getDDX() const { return 0.0; }
-      double getDDY() const { return 0.0; }
-   };
-
-   // Note that Acceleration23 ALWAYS returns a=(0.2,0.3)
-   class Acceleration23 : public AccelerationDummy
-   {
-      double getDDX() const { return 0.2; }
-      double getDDY() const { return 0.3; }
-   };
-
 
    /*********************************************
     * name:    ADD update position when not moving and not accelerating
@@ -554,7 +525,7 @@ private:
    {
       assertUnit(NOT_YET_IMPLEMENTED);
    }
-
+   
    /*********************************************
     * name:    ADD update position when both moving and accelerating for 2 seconds
     * input:   pos=(11.1,22.2) acc=(0.2,0.3), vel=(0.5,0.4) t=2
@@ -564,21 +535,33 @@ private:
    // update position when both moving and accelerating for 2 seconds
    void add_complex()
    {  // SETUP
-      Position       pos;
-      Velocity54     vel;
-      Acceleration23 acc;
-      double         time(2.0);
+      double metersFromPixels = Position::metersFromPixels;
+      Position::metersFromPixels = 99.9;
+      Position pos;
       pos.x = 11.1;
       pos.y = 22.2;
+      Velocity vel;
+      vel.dx = 0.5;
+      vel.dy = 0.4;
+      Acceleration acc;
+      acc.ddx = 0.2;
+      acc.ddy = 0.3;
+      double time(2.0);
 
       // EXERCISE
       pos.add(acc, vel, time);
 
       // VERIFY
-      assertEquals(pos.x, 12.5);
-      assertEquals(pos.y, 23.6);
-   }  // TEARDOWN
+      assertEquals(pos.x,  12.5); // 12.5 = 11.1 + 0.5*2 + 1/2 .2 2^2
+      assertEquals(pos.y,  23.6); // 23.6 = 22.2 + 0.4*2 + 1/2 .3 2^2
+      assertEquals(vel.dx,  0.5);
+      assertEquals(vel.dy,  0.4);
+      assertEquals(acc.ddx, 0.2);
+      assertEquals(acc.ddy, 0.3);
+      assertEquals(time,    2.0);
 
-
+      // TEARDOWN
+      Position::metersFromPixels = metersFromPixels;
+   }
 
 };

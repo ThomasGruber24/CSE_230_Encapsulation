@@ -22,7 +22,3 @@ void Acceleration::set(const Angle & a, double magnitude)
 {
    
 }
-void AccelerationDummy::set(const Angle& a, double magnitude)
-{
-   assert(false);
-}

@@ -2,7 +2,7 @@
  * Header File:
  *    PROJECTILE
  * Author:
- *    <your name here>
+ *    Thomas Gruber
  * Summary:
  *    Everything we need to know about a projectile
  ************************************************************************/
@@ -28,32 +28,26 @@ class TestProjectile;
 class Projectile
 {
 public:
-   // Friend the unit test class
-   friend ::TestProjectile;
+    friend ::TestProjectile;
+   
+    Projectile();
 
-   // create a new projectile with the default settings
-   Projectile() : mass(-99.9), radius(-99.9) {}
+    void reset();
 
+    void fire(const Position& posPixels, double time, const Angle& angle, double muzzleVelocity);
 
-
-   // advance the round forward until the next unit of time
-   void advance(double simulationTime) {}
-
-
-
+    void advance(double simulationTime);
 
 private:
+    struct PositionVelocityTime
+    {
+        PositionVelocityTime() : pos(), v(), t(0.0) {}
+        Position pos;
+        Velocity v;
+        double t;
+    };
 
-   // keep track of one moment in the path of the projectile
-   struct PositionVelocityTime
-   {
-      PositionVelocityTime() : pos(), v(), t(0.0) {}
-      Position pos;
-      Velocity v;
-      double t;
-   };
-
-   double mass;           // weight of the M795 projectile. Defaults to 46.7 kg
-   double radius;         // radius of M795 projectile. Defaults to 0.077545 m
-   std::list<PositionVelocityTime> flightPath;
+    double mass;
+    double radius;
+    std::list<PositionVelocityTime> flightPath;
 };
